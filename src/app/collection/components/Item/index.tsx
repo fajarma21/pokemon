@@ -41,7 +41,7 @@ const Item = ({ data, onClickEdit, onClickRelease }: ItemProps) => {
         <b>{nickname || getFirstName(name)}</b>
       </p>
       <p>
-        <small>{dayjs(time).format('DD/MM/YY/ HH:mm:ss')}</small>
+        <small>{dayjs(time).format('DD/MM/YY HH:mm:ss')}</small>
       </p>
     </>
   );
