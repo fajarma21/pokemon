@@ -1,0 +1,24 @@
+.statsTable {
+  overflow: hidden;
+  border-radius: 8px;
+  width: 100%;
+  border-spacing: 0px;
+  border: 1px solid var(--accent);
+  background: var(--background);
+
+  tr {
+    &:nth-child(odd) {
+      background: var(--accent);
+    }
+
+    > th,
+    > td {
+      padding: 8px 16px;
+    }
+
+    > th {
+      text-align: left;
+      text-transform: uppercase;
+    }
+  }
+}

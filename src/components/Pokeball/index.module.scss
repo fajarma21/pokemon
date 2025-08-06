@@ -1,0 +1,94 @@
+@keyframes rotating {
+  0% {
+    left: -63%;
+    transform: scaleX(0);
+  }
+  15%,
+  35% {
+    transform: scaleX(1);
+  }
+  50%,
+  100% {
+    left: 63%;
+    transform: scaleX(0);
+  }
+}
+
+.ball {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &::before {
+    background-image: linear-gradient(
+      to bottom,
+      #e66969 45%,
+      #3f3f3f 45%,
+      #3f3f3f 55%,
+      white 55%,
+      white
+    );
+  }
+
+  &::after {
+    background-image: radial-gradient(
+      transparent 30%,
+      rgb(0 0 0 / 10%) 30%,
+      rgb(0 0 0 / 10%) 50%,
+      rgb(0 0 0 / 20%) 50%,
+      rgb(0 0 0 / 20%) 65%,
+      rgb(0 0 0 / 30%) 65%,
+      rgb(0 0 0 / 30%)
+    );
+  }
+
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      width: 28%;
+      height: 28%;
+      background-color: #3f3f3f;
+    }
+
+    &::after {
+      width: 14%;
+      height: 14%;
+      background-color: white;
+    }
+  }
+
+  &[data-rotating] {
+    .circle {
+      animation: rotating 5s steps(12, jump-start) infinite;
+    }
+  }
+}

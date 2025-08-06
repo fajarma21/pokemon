@@ -1,0 +1,46 @@
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+
+  > section {
+    margin-bottom: 32px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-transform: capitalize;
+    margin-bottom: 16px;
+  }
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.descriptionContainer {
+  p {
+    margin-bottom: 8px;
+    b {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.reroll {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  border: 2px solid #9e9eff;
+  border-width: 2px 0;
+  border-radius: 8px 2px;
+  transition: transform 250ms;
+
+  &:active {
+    transform: rotate(180deg);
+  }
+}
