@@ -1,5 +1,5 @@
-import { Dialog } from 'fajarma-react-lib';
 import Image from 'next/image';
+import { Dialog } from 'fajarma-react-lib';
 
 import getPokemonImg from '@/utils/getPokemonImg';
 
@@ -17,8 +17,8 @@ const PokeDialog = ({
   return (
     <Dialog
       display={display}
-      className={styles.dialog}
-      overlayClassName={styles.dialogOverlay}
+      className={styles.dialogModifier}
+      overlayClassName={styles.overlayModifier}
       onClose={onClose}
     >
       <div className={styles.container}>

@@ -1,13 +1,9 @@
-.dialog {
+.dialogModifier {
   max-width: calc(100vw - 32px);
-  width: 500px;
-  padding-top: 50px;
-  padding-bottom: 32px;
-  border: 2px solid var(--accent);
-  background-color: var(--background);
+  width: 500px !important;
 }
 
-.dialogOverlay {
+.overlayModifier {
   background-color: var(--overlayColor);
 }
 
@@ -17,7 +13,7 @@
 
 .imgModifier {
   position: absolute;
-  top: -180px;
+  top: -170px;
   right: -32px;
   filter: drop-shadow(20px -10px 0px var(--accent));
 }
@@ -35,10 +31,10 @@
 .inner {
   text-align: center;
   margin-top: 16px;
-  padding-top: 16px;
+  padding: 16px 0;
   border-top: 1px solid var(--accent);
-}
 
-.inner > *:not(:last-child) {
-  margin-bottom: 16px;
+  > *:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
